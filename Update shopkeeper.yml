@@ -1,0 +1,24 @@
+info:
+  name: Update shopkeeper
+  type: http
+  seq: 16
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/shopkeepers/lojista@teste.com"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "João Silva Atualizado",
+        "password": "novaSenha456",
+        "documentId": "06990590000123",
+        "companyName": "Mercado Novo"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

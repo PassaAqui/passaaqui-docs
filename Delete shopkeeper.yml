@@ -1,0 +1,15 @@
+info:
+  name: Delete shopkeeper
+  type: http
+  seq: 18
+
+http:
+  method: DELETE
+  url: "{{base_url}}/api/shopkeepers/lojista@teste.com"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

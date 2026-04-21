@@ -1,0 +1,26 @@
+info:
+  name: Register Shopkeeper
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/auth/register/shopkeeper"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "lojista@teste.com",
+        "name": "João Silva",
+        "password": "12345678",
+        "confirm_password": "12345678",
+        "documentId": "06.990.590/0001-23",
+        "companyName": "Mercadinho do João"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
