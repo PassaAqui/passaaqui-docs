@@ -1,0 +1,22 @@
+info:
+  name: Update category
+  type: http
+  seq: 23
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/categories/1"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Categoria Atualizada",
+        "description": "Descrição atualizada"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

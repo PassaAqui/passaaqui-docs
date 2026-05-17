@@ -1,0 +1,15 @@
+info:
+  name: Delete POI
+  type: http
+  seq: 34
+
+http:
+  method: DELETE
+  url: "{{base_url}}/api/pois/1"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

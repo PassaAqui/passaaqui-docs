@@ -1,0 +1,22 @@
+info:
+  name: Create category
+  type: http
+  seq: 20
+
+http:
+  method: POST
+  url: "{{base_url}}/api/categories"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Nova Categoria",
+        "description": "Descrição da categoria"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

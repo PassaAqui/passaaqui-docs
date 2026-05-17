@@ -1,0 +1,30 @@
+info:
+  name: Create POI
+  type: http
+  seq: 30
+
+http:
+  method: POST
+  url: "{{base_url}}/api/pois"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Marco Zero",
+        "description": "Praça do Marco Zero em Recife",
+        "xpReward": 50,
+        "latitude": -8.06317,
+        "longitude": -34.87112,
+        "minLatitude": -8.07,
+        "maxLatitude": -8.05,
+        "minLongitude": -34.88,
+        "maxLongitude": -34.86,
+        "cityId": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
